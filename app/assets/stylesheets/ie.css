@@ -1,0 +1,18 @@
+#sidebar ul#nav li a strong { position: relative; right: -1px; margin: 0; }
+#header form { margin-left: 10px; }
+#header form .quickresults { left: 20px; }
+
+#content .tableactions input.submit,
+#content form input.submit,
+#content form .custom_file input.button {
+	padding-left: 0;
+	padding-right: 0;
+	}
+	
+#content .progress_bar.small {
+	padding-right: 2px;
+	}
+	
+#content form .custom_file input.button {
+	vertical-align: middle;
+	}

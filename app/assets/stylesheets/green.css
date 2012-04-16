@@ -1,0 +1,106 @@
+/*
+Template Name: Adminium Green
+*/
+
+body {
+	background: #fff url(../images/sbr.gif) top left repeat-y;
+	}
+
+a {
+	color: #2c8300;
+	}
+	
+a:hover {
+	color: #66c200;
+	}
+	
+#sidebar ul#nav li a {
+	border-bottom: 1px solid #cbcbcb;
+	color: #666;
+	}
+	
+#sidebar ul#nav li a:hover {
+	background: #2d8400 url(../images/mbgg.jpg) 0 0 repeat-x;
+	border-top: 1px solid #339800;
+	border-bottom: 1px solid #184701;
+	text-shadow: 0 1px 0 #184701;
+	}
+	
+#sidebar ul#nav li a span {
+	background: #e5e5e5;
+	border: 1px solid #bbb;
+	}
+
+#sidebar ul#nav li a:hover span {
+	background: #448a05;
+	border: 1px solid #387601;
+	text-shadow: 0 1px 0 #333;
+	box-shadow: 0 1px 0 #61c20a;
+	-moz-box-shadow: 0 1px 0 #61c20a;
+	-webkit-box-shadow: 0 1px 0 #61c20a;
+	}
+	
+#sidebar ul#nav li ul {
+	background: #e5e5e5;
+	border-bottom: 1px solid #d1d1d1;
+	}
+	
+#sidebar ul#nav li ul li a:hover {
+	color: #349a00;
+	}
+	
+#sidebar .status_box ul {
+	background: #e5e5e5;
+	border: 1px solid #cdcdcd;
+	}
+	
+#sidebar .status_box ul li a {
+	color: #757575;
+	}
+	
+#content .breadcrumb a:hover {
+	color: #459200;
+	}
+	
+#content .table_pagination a.active {
+	border: 1px solid #4aa600;
+	}
+
+#content .table_pagination a:hover {
+	color: #fff;
+	background: #6ec200;
+	border: 1px solid #459b00;
+	}
+	
+#content form input.submit,	
+#content .tableactions input.submit,
+#content form .custom_file input.button {
+	border: 1px solid #184701;
+	background: #4aa400 url(../images/mbgg.jpg) center repeat-x;
+	-moz-box-shadow: inset 0 1px 0 #8fd83a;
+	-webkit-box-shadow: inset 0 1px 0 #8fd83a;
+	box-shadow: inset 0 1px 0 #8fd83a;	
+	}
+
+#content .date_selector td.selected {
+	color: #7cdb2e;
+	}
+	
+#content .date_selector td.selectable_day:hover, #content .date_selector td.selectable_day.hover {
+	background: #5abf00;
+	}
+	
+.loginpage {
+	background: #eee;
+	}
+	
+#content.loginbox {
+	border: 1px solid #bbb;
+	}
+	
+.ui-slider .ui-slider-range {
+	background: #5bb700;
+	-moz-box-shadow: inset 0 0 3px #285100;
+	-webkit-box-shadow: inset 0 0 3px #285100;
+	box-shadow: inset 0 0 3px #285100;
+	}

@@ -1,0 +1,54 @@
+<%- model_class = CaseStudy.new.class -%>
+<h1><%=t '.title', :default => model_class.model_name.human.pluralize %></h1>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th><%= model_class.human_attribute_name(:id) %></th>
+      <th><%= model_class.human_attribute_name(:title) %></th>
+      <th><%= model_class.human_attribute_name(:location) %></th>
+      <th><%= model_class.human_attribute_name(:opening_date) %></th>
+      <th><%= model_class.human_attribute_name(:description) %></th>
+      <th><%= model_class.human_attribute_name(:summary) %></th>
+      <th><%= model_class.human_attribute_name(:highlights) %></th>
+      <th><%= model_class.human_attribute_name(:awards) %></th>
+      <th><%= model_class.human_attribute_name(:collaborators) %></th>
+      <th><%= model_class.human_attribute_name(:is_active) %></th>
+      <th><%= model_class.human_attribute_name(:is_featured) %></th>
+      <th><%= model_class.human_attribute_name(:category_id) %></th>
+      <th><%= model_class.human_attribute_name(:created_at) %></th>
+      <th><%=t '.actions', :default => t("helpers.actions") %></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @case_studies.each do |case_study| %>
+      <tr>
+        <td><%= link_to case_study.id, admin_case_study_path(case_study) %></td>
+        <td><%= case_study.title %></td>
+        <td><%= case_study.location %></td>
+        <td><%= case_study.opening_date %></td>
+        <td><%= case_study.description %></td>
+        <td><%= case_study.summary %></td>
+        <td><%= case_study.highlights %></td>
+        <td><%= case_study.awards %></td>
+        <td><%= case_study.collaborators %></td>
+        <td><%= case_study.is_active %></td>
+        <td><%= case_study.is_featured %></td>
+        <td><%= case_study.category_id %></td>
+        <td><%=l case_study.created_at %></td>
+        <td>
+          <%= link_to t('.edit', :default => t("helpers.links.edit")),
+                      edit_admin_case_study_path(case_study), :class => 'btn btn-mini' %>
+          <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
+                      admin_case_study_path(case_study),
+                      :method => :delete,
+                      :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')),
+                      :class => 'btn btn-mini btn-danger' %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<%= link_to t('.new', :default => t("helpers.links.new")),
+            new_admin_case_study_path,
+            :class => 'btn btn-primary' %>

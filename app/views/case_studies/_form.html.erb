@@ -1,0 +1,74 @@
+<%= form_for @case_study,:html => { :multipart => true, :class => 'form-horizontal'  } do |f| %>
+
+	<p>
+		<%= f.label :title, :class => 'control-label' %><br />
+		<%= f.text_field :title, :size => '60', :class => 'text' %>
+    <span class="note">*A note</span>
+  </p>
+
+	<p>
+    <%= f.label :location, :class => 'control-label' %><br />
+    <%= f.text_field :location, :size => '60', :class => 'text' %>
+  </p>
+	
+	<p>
+		<%= f.label :summary, :class => 'control-label' %><br />
+		<%= f.text_area :summary, :size => '100', :rows => '15', :class => 'text_area' %>
+	</p>
+	
+	<p>
+		<%= f.label :description, :class => 'control-label' %><br />
+		<%= f.text_area :description, :size => '100', :rows => '15', :class => 'text_area' %>
+	</p>
+	
+	<p>
+		<%= f.label :highlights, :class => 'control-label' %><br />
+		<%= f.text_area :highlights, :size => '100', :rows => '15', :class => 'text_area' %>
+	</p>
+	
+	<p>
+		<%= f.label :awards, :class => 'control-label' %><br />
+		<%= f.text_area :awards, :size => '100', :rows => '15', :class => 'text_area' %>
+	</p>
+	
+	<p>
+		<%= f.label :collaborators, :class => 'control-label' %><br />
+		<%= f.text_area :collaborators, :size => '100', :rows => '15', :class => 'text_area' %>
+	</p>
+	
+	<hr />
+
+	<p>
+	  <%= f.label :opening_date, :class => 'control-label' %>
+	  <%= f.text_field :opening_date, :class => 'text date_picker' %>
+	</p>
+	
+	<hr />
+	
+	<p class="onoffswitch">
+		<%= f.check_box :is_featured, :class => 'onoffbtn' %>
+    <%= f.label :is_featured, :class => 'control-label' %>
+  </p>
+
+	<p class="onoffswitch">
+		<%= f.check_box :is_active, :class => 'onoffbtn' %>
+    <%= f.label :is_active, :class => 'control-label' %>
+  </p>
+		
+		<hr />
+
+		
+		<hr />
+
+	  <p class="form-actions">
+	    <%= f.submit nil, :class => 'submit' %>
+	    <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+	                case_studies_path, :class => 'submit disabled' %>
+	  </p>
+	
+		<br />
+		<br />
+	
+<% end %>
+
+

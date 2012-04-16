@@ -1,0 +1,59 @@
+<%- model_class = @case_study.class -%>
+<h1><%=t '.title', :default => model_class.model_name.human %></h1>
+
+<p>
+  <strong><%= model_class.human_attribute_name(:title) %>:</strong><br>
+  <%= @case_study.title %>
+</p>
+<p>
+  <strong><%= model_class.human_attribute_name(:location) %>:</strong><br>
+  <%= @case_study.location %>
+</p>
+<p>
+  <strong><%= model_class.human_attribute_name(:opening_date) %>:</strong><br>
+  <%= @case_study.opening_date %>
+</p>
+<p>
+  <strong><%= model_class.human_attribute_name(:description) %>:</strong><br>
+  <%= @case_study.description %>
+</p>
+<p>
+  <strong><%= model_class.human_attribute_name(:summary) %>:</strong><br>
+  <%= @case_study.summary %>
+</p>
+<p>
+  <strong><%= model_class.human_attribute_name(:highlights) %>:</strong><br>
+  <%= @case_study.highlights %>
+</p>
+<p>
+  <strong><%= model_class.human_attribute_name(:awards) %>:</strong><br>
+  <%= @case_study.awards %>
+</p>
+<p>
+  <strong><%= model_class.human_attribute_name(:collaborators) %>:</strong><br>
+  <%= @case_study.collaborators %>
+</p>
+<p>
+  <strong><%= model_class.human_attribute_name(:is_active) %>:</strong><br>
+  <%= @case_study.is_active %>
+</p>
+<p>
+  <strong><%= model_class.human_attribute_name(:is_featured) %>:</strong><br>
+  <%= @case_study.is_featured %>
+</p>
+<p>
+  <strong><%= model_class.human_attribute_name(:category_id) %>:</strong><br>
+  <%= @case_study.category_id %>
+</p>
+
+<div class="form-actions">
+  <%= link_to t('.back', :default => t("helpers.links.back")),
+              case_studies_path, :class => 'btn'  %>
+  <%= link_to t('.edit', :default => t("helpers.links.edit")),
+              edit_case_study_path(@case_study), :class => 'btn' %>
+  <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
+              case_study_path(@case_study),
+              :method => 'delete',
+              :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')),
+              :class => 'btn btn-danger' %>
+</div>
